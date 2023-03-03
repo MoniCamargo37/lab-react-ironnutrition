@@ -1,38 +1,62 @@
 .App {
   text-align: center;
+  margin: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btnDelete {
+  background-color: rgb(132, 203, 240);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: small;
+  margin-left: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.formContainer {
+  width: 80%;
+  margin: auto;
+  color: #696969;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.searchCard {
+  width: 80%;
+  margin: auto;
+  color: #696969;
+}
+h1 {
+  color: #2f4f4f;
+  font-size: 24px;
+}
+.buttonShow {
+  background-color: rgb(132, 203, 240);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: small;
+  border-color: honeydew;
+  border-radius: 10px;
+  height: 40px;
+  width: 150px;
+  font-size: 18px;
 }
 
-.App-link {
-  color: #61dafb;
+.btnForm {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background-color: #ff7f50;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: small;
+  border-color: honeydew;
+  border-radius: 10px;
+  height: 40px;
+  width: 150px;
+  font-size: 18px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.feedbackMessage img {
+  width: 300px;
+  height: 400px;
+}
+
+.feedbackMessage h3 {
+color: #c13908;
 }
