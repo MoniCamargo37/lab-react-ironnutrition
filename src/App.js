@@ -24,43 +24,42 @@ function App() {
     setSearchValue(value);
   };
 
-  const handleDelete = (index) => {
-    console.log('delete', index);
-    const newFoods = [...foods];
-    newFoods.splice(index, 1);
-    setFoodList(newFoods);
+  const handleDelete = (foodDelete) => {
+    const deleteFoods = [...foods].filter((elem) => elem !== foodDelete);
+    setFoodList(deleteFoods);
   };
 
-  return (
-    <>
-      <div className="App">
-        {showForm ? null : (
-          <button className="buttonShow" onClick={handleShowFood}>
-            Add new food
-          </button>
-        )}
 
-        {showForm && <AddFormFood handleAddFood={handleAddFood} />}
+return (
+  <>
+    <div className="App">
+    
+      {!showForm && (
+        <button className="buttonShow" onClick={handleShowFood}>
+          Add new food
+        </button>
+      )}
 
-        {showForm ? (
-          <button className="buttonShow" onClick={handleShowFood}>
-            Hide form
-          </button>
-        ) : null}
-
+      {showForm && <AddFormFood handleAddFood={handleAddFood} />}
+   
+      {showForm && (
+        <button className="buttonShow" onClick={handleShowFood}>
+          Hide form
+        </button>
+      )}
         <h1>Search</h1>
         <SearchFood handleSearch={handleSearch} />
         <h1>My food list</h1>
-        <Row style={{ justifyContent: 'center' }} gutter={[10, 10]}> 
+        <Row style={{ justifyContent: 'center' }} gutter={[10, 10]}>
           {foods
             .filter((elem) =>
-              elem.name.toLowerCase().includes(searchValue.toLocaleLowerCase())
+              elem.name.toLowerCase().includes(searchValue.toLowerCase())
             )
-            .map((elem, index) => (
+            .map((elem) => (
               <FoodBox
                 key={elem.name}
                 food={elem}
-                handleDelete={() => handleDelete(index)}
+                handleDelete={() => handleDelete(elem)}
               />
             ))}
 

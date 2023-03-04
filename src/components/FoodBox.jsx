@@ -1,9 +1,9 @@
 import { Button, Card, Col } from 'antd';
 
 function FoodBox({ food, handleDelete }) {
-  const { name, calories, image, servings, _id } = food;
+  const { name, calories, image, servings, } = food;
   const handleDeleteCourse = () => {
-    handleDelete(_id);
+    handleDelete(food);
   };
 
   return (
@@ -21,7 +21,6 @@ function FoodBox({ food, handleDelete }) {
           <img
             src={image}
             alt={name}
-            objectFit="cover"
             height="150"
             width="150"
           />

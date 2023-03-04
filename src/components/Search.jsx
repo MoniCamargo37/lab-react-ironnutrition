@@ -1,14 +1,15 @@
-import { Input } from 'antd';
 
-function SearchFood({ handleSearch }) {
+function SearchFood({ handleSearch, searchValue }) {
   return (
     <div className="searchCard">
-      <Input
+      <input
         type="text"
+        value={searchValue}
         onChange={(e) => handleSearch(e.target.value)}
         placeholder="Search products"
       />
     </div>
   );
 }
+
 export default SearchFood;
